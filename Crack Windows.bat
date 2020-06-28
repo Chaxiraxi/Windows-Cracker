@@ -46,14 +46,14 @@ echo 12) Enterprise 2015 LTSB N
 echo 13) Enterprise 2016 LTSB
 echo 14) Enterprise 2016 LTSB N
 echo.
-set /p WinVer="AzerCrack > "
+set /p WinVer="Chaxi-Crack > "
 echo.
 if %WinVer% lss 1 (goto :menu)
 if %WinVer% gtr 14 (goto :menu)
 
 echo Vous avez choisi le choix %WinVer%, est-ce correct ? o/N
 set WinVerConfirm=n
-set /p Wigetadmin.vbs"AzerCrack > "
+set /p WinVerConfirm="Chaxi-Crack > "
 if %WinVerConfirm%==O (goto :crack) else (if %WinVerConfirm%==o (goto :crack) else (goto :menu))
 
 :crack
