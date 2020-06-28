@@ -1,7 +1,4 @@
 @echo off
-:admin
-:: BatchGotAdmin
-::-------------------------------------
 REM  --> Test si le script est lancé en tant qu'admin
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
 >nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
@@ -29,7 +26,6 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-::-------------------------------------
 
 :menu
 cls
@@ -50,14 +46,14 @@ echo 12) Enterprise 2015 LTSB N
 echo 13) Enterprise 2016 LTSB
 echo 14) Enterprise 2016 LTSB N
 echo.
-set /p WinVer="AzerCrack > "
+set /p WinVer="Chaxi-Crack > "
 echo.
 if %WinVer% lss 1 (goto :menu)
 if %WinVer% gtr 14 (goto :menu)
 
 echo Vous avez choisi le choix %WinVer%, est-ce correct ? o/N
 set WinVerConfirm=n
-set /p WinVerConfirm="AzerCrack > "
+set /p WinVerConfirm="Chaxi-Crack > "
 if %WinVerConfirm%==O (goto :crack) else (if %WinVerConfirm%==o (goto :crack) else (goto :menu))
 
 :crack
@@ -83,3 +79,4 @@ cscript C:\Windows\System32\slmgr.vbs /ato > nul
 echo Windows a ete active
 echo.
 pause
+exit
