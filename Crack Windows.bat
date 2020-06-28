@@ -73,9 +73,9 @@ if %WinVer%==12 set key=2F77B-TNFGY-69QQF-B8YKP-D69TJ)
 if %WinVer%==13 (set key=DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ)
 if %WinVer%==14 (set key=QFFDN-GRT3P-VKWWX-X7T3R-8B639)
 echo.
-cscript C:\Windows\System32\slmgr.vbs /ipk %key% > nul
-cscript C:\Windows\System32\slmgr.vbs /skms kms.lotro.cc > nul
-cscript C:\Windows\System32\slmgr.vbs /ato > nul
+cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
+cscript %SYSTEMROOT%\System32\slmgr.vbs /skms kms.lotro.cc > nul
+cscript %SYSTEMROOT%\System32\slmgr.vbs /ato > nul
 echo Windows a ete active
 echo.
 pause
