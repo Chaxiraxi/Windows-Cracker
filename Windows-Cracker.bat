@@ -7,7 +7,7 @@ REM --> Si il y a une erreur, c'est que l'on a pas les doits
 if '%errorlevel%' NEQ '0' (
     echo Le systeme de crack a besoin des droits d'admin pour fonctionner.
     echo Demande des droits d'administrateurs, veulliez accepter.
-    ping localhost /t /n 10 > nul
+    ping localhost /t /n 2 > nul
     goto UACPrompt
 ) else ( goto gotAdmin )
 
