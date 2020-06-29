@@ -79,7 +79,6 @@ if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
 echo Crack en cours....
 echo.
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
-cscript %SYSTEMROOT%\System32\slmgr.vbs /skms kms.lotro.cc > nul
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ato > nul
 echo Windows a ete active
 echo.
