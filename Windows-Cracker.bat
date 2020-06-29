@@ -74,10 +74,11 @@ if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
   echo Windows a ete desactiver
   pause
   exit)
-echo Crack en cours....
-echo.
+echo Crack en cours.... [1/2]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
+echo Crack en cours.... [2/2]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ato > nul
+echo.
 echo Windows a ete active
 echo.
 pause
