@@ -21,7 +21,6 @@ REM --> Choppe les droits avec un fichier .vbs
     del "%temp%\getadmin.vbs"
     exit /B
 
-REM --> On a les droits, pas besoin de les demander
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
@@ -68,7 +67,7 @@ if %WinVer%==8 (set key=DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4)
 if %WinVer%==9 (set key=NW6C2-QMPVW-D7KKK-3GKT6-VCFB2)
 if %WinVer%==10 (set key=2WH4N-8QGBV-H22JP-CT43Q-MDWWJ)
 if %WinVer%==11 (set key=WNMTR-4C88C-JK8YV-HQ7T2-76DF9)
-if %WinVer%==12 set key=2F77B-TNFGY-69QQF-B8YKP-D69TJ)
+if %WinVer%==12 (set key=2F77B-TNFGY-69QQF-B8YKP-D69TJ)
 if %WinVer%==13 (set key=DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ)
 if %WinVer%==14 (set key=QFFDN-GRT3P-VKWWX-X7T3R-8B639)
 if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
