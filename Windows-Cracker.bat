@@ -7,7 +7,7 @@ REM --> Si il y a une erreur, c'est que l'on a pas les doits
 if '%errorlevel%' NEQ '0' (
     echo Le systeme de crack a besoin des droits d'admin pour fonctionner.
     echo Demande des droits d'administrateurs, veulliez accepter.
-    ping localhost /t /n 2 > nul
+    ping localhost /t /n 10 > nul
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -44,11 +44,12 @@ echo 12) Enterprise 2015 LTSB N
 echo 13) Enterprise 2016 LTSB
 echo 14) Enterprise 2016 LTSB N
 echo 15) Desactiver Windows
+echo 16) Activer avec une cle personnalisee
 echo.
 set /p WinVer="Chaxi-Crack > "
 echo.
 if %WinVer% lss 1 (goto :menu)
-if %WinVer% gtr 15 (goto :menu)
+if %WinVer% gtr 16 (goto :menu)
 
 echo Vous avez choisi le choix %WinVer%, est-ce correct ? o/N
 set WinVerConfirm=n
@@ -74,6 +75,8 @@ if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
   echo Windows a ete desactiver
   pause
   exit)
+if %WinVer%==16 (echo Entrez votre cle d'activation sous le format XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+  set /p key="Chaxi-Crack >")
 echo Crack en cours.... [1/2]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
 echo Crack en cours.... [2/2]
