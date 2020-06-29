@@ -1,10 +1,7 @@
 @echo off
 REM  --> Test si le script est lancé en tant qu'admin
-    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
->nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
-) ELSE (
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-)
+    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system") ELSE (
+      >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system")
 
 REM --> Si il y a une erreur, c'est que l'on a pas les doits
 if '%errorlevel%' NEQ '0' (
@@ -14,6 +11,7 @@ if '%errorlevel%' NEQ '0' (
     goto UACPrompt
 ) else ( goto gotAdmin )
 
+REM --> Choppe les droits avec un fichier .vbs
 :UACPrompt
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
     set params= %*
@@ -23,6 +21,7 @@ if '%errorlevel%' NEQ '0' (
     del "%temp%\getadmin.vbs"
     exit /B
 
+REM --> On a les droits, pas besoin de les demander
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
@@ -31,10 +30,10 @@ if '%errorlevel%' NEQ '0' (
 cls
 echo Choisissez votre version de Windows :
 echo.
-echo 1)  Home/Core
-echo 2)  Home/Core (Pays specifique)
-echo 3)  Home/Core (Une seule langue)
-echo 4)  Home/Core N
+echo 1)  Famille / Core
+echo 2)  Famille / Core (Pays specifique)
+echo 3)  Famille / Core (Une seule langue)
+echo 4)  Famille / Core N
 echo 5)  Professionel
 echo 6)  Professionel N
 echo 7)  Enterprise
