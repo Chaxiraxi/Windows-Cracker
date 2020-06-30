@@ -27,7 +27,7 @@ REM --> Choppe les droits avec un fichier .vbs
 
 :menu
 cls
-echo Choisissez votre version de Windows :
+echo Choisissez votre version de Windows a crack :
 echo.
 echo 1)  Famille / Core
 echo 2)  Famille / Core (Pays specifique)
@@ -43,6 +43,10 @@ echo 11) Enterprise 2015 LTSB
 echo 12) Enterprise 2015 LTSB N
 echo 13) Enterprise 2016 LTSB
 echo 14) Enterprise 2016 LTSB N
+echo.
+echo.
+echo Autres options :
+echo.
 echo 15) Desactiver Windows
 echo 16) Activer avec une cle personnalisee
 echo.
@@ -76,7 +80,7 @@ if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
   pause
   exit)
 if %WinVer%==16 (echo Entrez votre cle d'activation sous le format XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
-  set /p key="Chaxi-Crack >")
+  set /p key="Chaxi-Crack > ")
 echo Crack en cours.... [1/2]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
 echo Crack en cours.... [2/2]
