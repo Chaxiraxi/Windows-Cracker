@@ -1,4 +1,5 @@
 @echo off
+title Windows-Cracker
 REM  --> Test si le script est lancé en tant qu'admin
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system") ELSE (
       >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system")
@@ -24,7 +25,6 @@ REM --> Choppe les droits avec un fichier .vbs
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-
 :menu
 cls
 echo Choisissez votre version de Windows a crack :
@@ -81,9 +81,11 @@ if %WinVer%==15 (cscript %SYSTEMROOT%\System32\slmgr.vbs -upk > nul
   exit)
 if %WinVer%==16 (echo Entrez votre cle d'activation sous le format XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
   set /p key="Chaxi-Crack > ")
-echo Crack en cours.... [1/2]
+echo Crack en cours.... [1/3]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ipk %key% > nul
-echo Crack en cours.... [2/2]
+echo Crack en cours.... [2/3]
+cscript %SYSTEMROOT%\System32\slmgr.vbs /skms kms.lotro.cc > nul
+echo Crack en cours.... [3/3]
 cscript %SYSTEMROOT%\System32\slmgr.vbs /ato > nul
 echo.
 echo Windows a ete active
