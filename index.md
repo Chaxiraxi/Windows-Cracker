@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Bienvenue sur le Wiki du Chaxi-Windows Cracker !
+## Introduction
+L'utilisation du programme est très simple en soi. Il s'agit d'un script qui va automatiser l'activation de n'importe quelle édition de Windows 10 gratuitement. Vous n'avez juste qu'à choisir votre édition de Windows dans un menu, et le programme le crack pour vous !
+## Marche à suivre
+### Les droits admin
+Le programme a besoin des droits administrateurs pour fonctionner. Si vous n'avez pas lancé le script en tant qu'admin, vous aurez une demande automatique que vous devez accepter pour continuer.
 
-You can use the [editor on GitHub](https://github.com/Chaxiraxi/Windows-Cracker/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![Demande des droits d'admin](https://i.ibb.co/dKGnRRj/Demande-admin.png)
+### Le menu de sélection
+Vous devez ensuite sélectionner l'édition de Windows qui est installé sur votre ordinateur en tapant le numéro correspondant, puis taper sur ENTER.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Choix de l'édition de Windows 10](https://i.ibb.co/2vw1b8t/Choix-Win10-Edition.png)
 
-### Markdown
+Le programme vous demandera de confirmer votre choix, car si vous choisissez la mauvaise édition de Windows, le programme sera inefficace.
+### Le crack
+Vous verrez ensuite un message vous indiquant que le crack est en cours, puis qui vous indiquera que l'activation est terminée. Vous n'aurez plus qu'à appuyer sur n'importe quel touche pour fermer le programme. (Fermer la fenêtre normalement convient aussi)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Chaxiraxi/Windows-Cracker/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![Crack en cours](https://i.ibb.co/L0LHvHz/image.png)
+## Les autres options du programme
+Vous avez sûrement remarqué que le script ne permet pas uniquement d'activer Windows. Il peut également le désactiver ou encore l'activer avec votre propre clé si vous en détenez une.
