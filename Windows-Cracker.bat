@@ -4,9 +4,9 @@ REM  --> Test si le script est lancé en tant qu'admin
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system") ELSE (
       >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system")
 
-REM --> Si il y a une erreur, c'est que l'on a pas les doits
+REM --> Si il y a une erreur, c'est que l'on a pas les droits
 if '%errorlevel%' NEQ '0' (
-    echo Le systeme de crack a besoin des droits d'admin pour fonctionner.
+    echo Le systeme de crack a besoin des droits admin pour fonctionner.
     echo Demande des droits d'administrateurs, veulliez accepter.
     ping localhost /t /n 2 > nul
     goto UACPrompt
